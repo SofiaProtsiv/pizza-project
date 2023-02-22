@@ -1,0 +1,79 @@
+@import "../../style/base/mixins.scss";
+
+.pizza-block-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.pizza-block {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  transition: 400ms ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  @include onTablet {
+    width: 280px;
+  }
+}
+
+.pizza-block__image {
+  width: 100%;
+  height: 260px;
+  margin-left: 0.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.pizza-block__title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 1%;
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+.pizza-block__selector {
+  display: flex;
+  background-color: var(--light-grey-color);
+  border-radius: 0.75rem;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.pizza-block__selector ul {
+  display: flex;
+  flex: 1;
+}
+.pizza-block__selector ul:first-of-type {
+  margin-bottom: 0.5rem;
+}
+.pizza-block__selector ul li {
+  padding: 0.5rem;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  user-select: none;
+}
+.pizza-block__selector ul li.active {
+  background: var(--body-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  cursor: auto;
+}
+
+.pizza-block__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+.pizza-block__price {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.015em;
+}

@@ -1,0 +1,129 @@
+@import "../base/mixins.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  justify-content: center;
+  background-color: var(--accent-color);
+  border-radius: 2rem;
+  padding: 0.625rem 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  border: 1px solid transparent;
+  user-select: none;
+
+  @include onTablet {
+    min-width: 6.25rem;
+  }
+}
+.button,
+.button span {
+  color: var(--body-color);
+}
+.button i,
+.button span,
+.button path,
+.button svg {
+  transition: 400ms ease;
+}
+.button:hover {
+  background-color: var(--hover-accent-color);
+}
+.button:active {
+  background-color: var(--hover-accent-color);
+  transform: translateY(1px);
+}
+.button--circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  padding: 0;
+  border-width: 2px;
+}
+.button--black {
+  background-color: #232323;
+}
+.button--black:hover,
+.button--black:active {
+  background-color: #3d3d3d;
+}
+.button--outline {
+  background-color: var(--body-color);
+  border-color: var(--accent-color);
+}
+.button--outline,
+.button--outline span {
+  color: var(--accent-color);
+}
+.button--outline svg path {
+  fill: var(--accent-color);
+}
+.button--outline:hover {
+  background-color: var(--accent-color);
+}
+.button--outline:hover,
+.button--outline:hover span {
+  color: var(--body-color);
+}
+.button--outline:hover svg path {
+  fill: var(--body-color);
+}
+.button--outline:active {
+  background-color: var(--hover-accent-color);
+}
+.button__delimiter {
+  width: 1px;
+  height: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+.button--add svg {
+  margin-right: 0.1rem;
+}
+.button--add span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.button--add:hover i {
+  background-color: var(--body-color);
+  color: var(--accent-color);
+}
+.button--add i {
+  display: inline-block;
+  border-radius: 2rem;
+  background-color: var(--accent-color);
+  color: var(--body-color);
+  font-weight: 600;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  position: relative;
+  top: -0.05rem;
+  left: 0.25rem;
+}
+.button--cart {
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem;
+  padding: 0.75rem 1rem;
+
+  @include onTablet {
+    padding: 0.75rem 1.5rem;
+  }
+}
+.button--cart svg {
+  margin-right: 0.5rem;
+  margin-bottom: 0.05rem;
+}
+.button--cart span {
+  font-weight: 600;
+  font-size: 1rem;
+}

@@ -1,0 +1,60 @@
+@import "../../style/base/mixins.scss";
+
+.header {
+  border-bottom: 1px solid var(----text-color-light);
+  padding: 3rem 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  cursor: pointer;
+}
+.header__logo img {
+  width: 2.5rem;
+  height: 3rem;
+  margin-right: 3rem;
+  @include onTablet {
+    margin-right: 1rem;
+  }
+}
+.header__logo h1 {
+  display: none;
+  @include onLaptop {
+    display: block;
+    color: var(----text-color);
+    font-size: 1.5rem;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+}
+.header__logo p {
+  display: none;
+  @include onLaptop {
+    display: block;
+    color: #c3c3c3;
+  }
+}
+
+.header__functional {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  @include onTablet {
+    gap: 3rem;
+  }
+}
+.header__cart {
+  & span:first-of-type,
+  & .button__delimiter {
+    display: none;
+    @include onTablet {
+      display: block;
+    }
+  }
+}

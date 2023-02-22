@@ -1,0 +1,34 @@
+@import "../../style/base/mixins.scss";
+
+.categories {
+  width: 100%;
+  max-width: 640px;
+  overflow: scroll;
+  @include onLaptop {
+    max-width: fit-content;
+    overflow: visible;
+  }
+}
+.categories ul {
+  display: flex;
+}
+.categories ul li {
+  background-color: var(--categoties-background);
+  padding: 13px 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+  user-select: none;
+}
+.categories ul li:hover {
+  background-color: var(--hover-categories-background);
+}
+.categories ul li:active {
+  background-color: var(--hover-categories-background);
+}
+.categories ul li.active {
+  background-color: var(--text-color);
+  color: var(--white-color);
+}

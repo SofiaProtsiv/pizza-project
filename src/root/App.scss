@@ -1,0 +1,31 @@
+@import "../style/base/mixins.scss";
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-color);
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+.content {
+  padding: 3rem 0;
+}
+.wrapper {
+  width: calc(100vw - 50px);
+  height: 100%;
+  background-color: var(--body-color);
+  margin: 25px auto;
+  border-radius: 10px;
+
+  @include onTablet {
+    width: calc(100vw - 75px);
+    margin: 30px auto;
+  }
+
+  @include onLaptop {
+    width: calc(100vw - 100px);
+    margin: 50px auto;
+  }
+}
